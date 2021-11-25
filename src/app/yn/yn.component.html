@@ -1,0 +1,14 @@
+<div class="p-field">
+  <label *ngIf="HasLabel">
+    {{MyLabel}}
+  </label>
+<p-dropdown
+             [id]="Id"
+             [options]="yesNoOptions"
+             [(ngModel)]="isChecked"
+             (ngModelChange)="onChange($event)"
+             [disabled]="isDisabled"
+             appendTo="body"
+></p-dropdown>
+
+</div>

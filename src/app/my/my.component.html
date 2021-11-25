@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="grid">
+    <div class="col">
+      <app-yn
+        Id="myY"
+        [HasLabel]="true"
+        MyLabel="Yes Version"
+        [(ngModel)]="myYes"
+        (ngModelChange)="onChanged('yes', $event)"
+      ></app-yn>
+    </div>
+
+    <div class="col">
+      <app-yn
+        Id="myn"
+        [HasLabel]="true"
+        MyLabel="No Version"
+        [(ngModel)]="myNo"
+        (ngModelChange)="onChanged('no', $event)"
+      ></app-yn>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="grid">
+    <div class="col">
+      <app-ml
+        id="left"
+        [HasLabel]="true"
+        MyLabel="left"
+        [Values]="options"
+        [(ngModel)]="left"
+        (ngModelChange)="onChanged('left', $event)"
+      ></app-ml>
+    </div>
+
+    <div class="col">
+      <app-ml
+        id="right"
+        [HasLabel]="true"
+        MyLabel="right"
+        [Values]="options"
+        [(ngModel)]="right"
+        (ngModelChange)="onChanged('right', $event)"
+      ></app-ml>
+    </div>
+  </div>
+</div>
